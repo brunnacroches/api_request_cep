@@ -1,10 +1,10 @@
 from typing import Dict, Tuple, Type
 from collections import namedtuple
 from requests import Request
+import requests
 from src.error_handling.http_request_error import HttpRequestError
-from src.data.interfaces.api_consumer import ApiConsumerInterface
 
-class ApiConsumer(ApiConsumerInterface):
+class ApiConsumer():
     def __init__(self) -> None:
         self.get_ok_message_response = namedtuple('GET_Ok', 'status_code request response')
 
